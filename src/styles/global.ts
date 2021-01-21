@@ -16,6 +16,7 @@ export default createGlobalStyle`
     background-color: #171328;
     color: #fff;
     font-size: 1.6rem;
+    line-height: 1.3;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -25,5 +26,11 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    background-color: transparent;
+    border: 0;
+  }
+
+  a, a:visited, a:active{
+    text-decoration: none;
   }
 `;
