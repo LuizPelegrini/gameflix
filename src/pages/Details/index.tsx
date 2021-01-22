@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Container, Cover } from './styles';
 import GameHero from '../../components/GameHero';
+import Screenshots from '../../components/Screenshots';
 
 const Details: React.FC = () => (
   <Container>
@@ -28,6 +29,7 @@ const Details: React.FC = () => (
       </p>
     </div>
     <div className="divider" />
+    <Screenshots />
   </Container>
 );
 

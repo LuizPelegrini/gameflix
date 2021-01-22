@@ -12,17 +12,11 @@ export const Container = styled.div`
     margin: 20px 0;
   }
 
-  .about {
-    h4 {
-      text-transform: uppercase;
-    }
-
-    p {
-      font-size: 1.4rem;
-      color: #c4c4c4;
-      text-align: justify;
-      line-height: 1.6;
-    }
+  .about p {
+    font-size: 1.3rem;
+    color: #c4c4c4;
+    text-align: justify;
+    line-height: 1.5;
   }
 `;
 

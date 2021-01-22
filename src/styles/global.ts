@@ -33,4 +33,10 @@ export default createGlobalStyle`
   a, a:visited, a:active{
     text-decoration: none;
   }
+
+  h4{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
 `;
