@@ -1,8 +1,15 @@
 import React from 'react';
 
-import { Container, Cover } from './styles';
+import {
+  Container,
+  Cover,
+  CriticsReview,
+  Platforms,
+  Developer,
+} from './styles';
 import GameHero from '../../components/GameHero';
 import Screenshots from '../../components/Screenshots';
+import Review from '../../components/Review';
 
 const Details: React.FC = () => (
   <Container>
@@ -14,7 +21,7 @@ const Details: React.FC = () => (
     </Cover>
     <GameHero />
     <div className="divider" />
-    <div className="about">
+    <section className="about">
       <h4>About</h4>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit,
@@ -27,9 +34,86 @@ const Details: React.FC = () => (
         tempora assumenda nihil molestias excepturi officia deserunt accusamus
         numquam nobis veniam unde ad!
       </p>
-    </div>
+    </section>
     <div className="divider" />
     <Screenshots />
+    <div className="divider" />
+    <CriticsReview>
+      <h4>Critics Review</h4>
+      <Review />
+      <Review />
+      <Review />
+      <Review />
+    </CriticsReview>
+    <div className="divider" />
+    <section id="platforms-developer">
+      <Platforms>
+        <h5>Platforms</h5>
+        <div>
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+          <img
+            src="https://assets.stickpng.com/thumbs/58481947cef1014c0b5e49b6.png"
+            alt="ps4 logo"
+          />
+        </div>
+      </Platforms>
+      <Developer>
+        <div>
+          <h5>Developer</h5>
+          <img
+            src="https://img.pngio.com/hd-web-ubisoft-paris-logo-free-unlimited-download-37598-ubisoft-logo-png-570_511.png"
+            alt="developer logo"
+          />
+        </div>
+        <div>
+          <h5>Publisher</h5>
+          <img
+            src="https://img.pngio.com/hd-web-ubisoft-paris-logo-free-unlimited-download-37598-ubisoft-logo-png-570_511.png"
+            alt="publisher logo"
+          />
+        </div>
+      </Developer>
+    </section>
+    <div className="divider" />
   </Container>
 );
 
