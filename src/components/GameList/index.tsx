@@ -56,8 +56,11 @@ const GameList: React.FC<GameListProps> = ({ title, games }: GameListProps) => {
             to="" // routing is made in the handleClick function
             key={game.cover.id}
             onMouseDown={() => setMouseMove(false)}
+            onTouchStart={() => setMouseMove(false)}
             onMouseMove={() => setMouseMove(true)}
+            onTouchMove={() => setMouseMove(true)}
             onMouseUp={() => handleClick()}
+            onTouchEnd={() => handleClick()}
           >
             <img src={game.cover.url} alt="" />
           </Item>
