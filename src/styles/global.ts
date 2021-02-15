@@ -40,3 +40,24 @@ export default createGlobalStyle`
     margin-bottom: 5px;
   }
 `;
+
+/**
+ * Media Query Breakpoints
+ */
+export const size = {
+  xs: 320,
+  // xs375: 375,
+  sm: 425,
+  md: 768,
+  lg: 1024,
+  // lg1440: '1440px',
+  xl: 2560,
+};
+
+export const device = {
+  xs: `(min-width: ${size.xs}px)`,
+  sm: `(min-width: ${size.sm}px)`,
+  md: `(min-width: ${size.md}px)`,
+  lg: `(min-width: ${size.lg}px)`,
+  xl: `(min-width: ${size.xl}px)`,
+};
