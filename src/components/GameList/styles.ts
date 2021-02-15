@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { device } from '../../styles/global';
 
 export const Container = styled.div`
@@ -43,7 +44,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Item = styled.div`
+export const Item = styled(Link)`
   display: inline-block;
   width: 100px;
   height: 130px;

@@ -1,5 +1,6 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import Slider, { ResponsiveObject } from 'react-slick';
+import { useHistory } from 'react-router-dom';
 
 import { Container, Item } from './styles';
 import { size } from '../../styles/global';
@@ -17,6 +18,15 @@ interface Game {
 }
 
 const GameList: React.FC<GameListProps> = ({ title, games }: GameListProps) => {
+  const history = useHistory();
+  const [mouseMove, setMouseMove] = useState(false);
+
+  // this is to avoid dragging the slider and performing the click
+  // the app will forward the user to Details pagee only if he doesnt drag
+  const handleClick = useCallback(() => {
+    if (!mouseMove) history.push('details');
+  }, [history, mouseMove]);
+
   // creating the breakpoints for Slick Slider
   const sizes = useMemo<ResponsiveObject[]>(() => {
     const temp: ResponsiveObject[] = [];
@@ -42,7 +52,13 @@ const GameList: React.FC<GameListProps> = ({ title, games }: GameListProps) => {
       <h5>{title}</h5>
       <Slider slidesToShow={7} arrows={false} responsive={sizes} draggable>
         {games.map(game => (
-          <Item key={game.cover.id}>
+          <Item
+            to="" // routing is made in the handleClick function
+            key={game.cover.id}
+            onMouseDown={() => setMouseMove(false)}
+            onMouseMove={() => setMouseMove(true)}
+            onMouseUp={() => handleClick()}
+          >
             <img src={game.cover.url} alt="" />
           </Item>
         ))}
